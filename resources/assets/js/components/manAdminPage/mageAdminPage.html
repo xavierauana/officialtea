@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-heading">Dashboard</div>
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <input type="number" name="phoneNumber" id="phoneNumber" :value="phoneNumber" class="form-control" onkeydown="return false">
+                </div>
+                <div class="clearfix dialPad">
+                    <div class="col-xs-4 digit"><button class="text-center btn btn-default" @click.prevent="addDigit(1)">1</button></div>
+                    <div class="col-xs-4 digit"><button class="text-center btn btn-default" @click.prevent="addDigit(2)">2</button></div>
+                    <div class="col-xs-4 digit"><button class="text-center btn btn-default" @click.prevent="addDigit(3)">3</button></div>
+                    <div class="col-xs-4 digit"><button class="text-center btn btn-default" @click.prevent="addDigit(4)">4</button></div>
+                    <div class="col-xs-4 digit"><button class="text-center btn btn-default" @click.prevent="addDigit(5)">5</button></div>
+                    <div class="col-xs-4 digit"><button class="text-center btn btn-default" @click.prevent="addDigit(6)">6</button></div>
+                    <div class="col-xs-4 digit"><button class="text-center btn btn-default" @click.prevent="addDigit(7)">7</button></div>
+                    <div class="col-xs-4 digit"><button class="text-center btn btn-default" @click.prevent="addDigit(8)">8</button></div>
+                    <div class="col-xs-4 digit"><button class="text-center btn btn-default" @click.prevent="addDigit(9)">9</button></div>
+                    <div class="col-xs-4  col-xs-offset-4 digit"><button class="text-center btn btn-default" @click.prevent="addDigit(0)">0</button></div>
+                    <div class="col-xs-4 digit"><button class="text-center btn btn-default" @click.prevent="removePreviousDigit"><i class="fa fa-arrow-left"></i></button></div>
+                </div>
+                <div class="col-xs-12">
+                    <button class="btn btn-info btn-block btn-lg" @click.prevent="addToQueue">Add To Queue</button>
+                </div>
+                <div class="well" v-show="queue.length>0">
+                    <ul class="list-unstyled">
+                        <li v-for="member in queue">{{member.phoneNumber}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

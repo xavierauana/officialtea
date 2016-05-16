@@ -1,0 +1,16 @@
+/**
+ * Created by Xavier on 15/5/2016.
+ */
+const ADD_TO_QUEUE = "ADD_TO_QUEUE";
+const RESET_QUEUE = "RESET_QUEUE";
+const ADD_PHONE_DIGIT = "ADD_PHONE_DIGIT";
+const REMOVE_PREVIOUS_DIGIT = "REMOVE_PREVIOUS_DIGIT";
+const RESET_PHONE = "RESET_PHONE";
+
+module.exports = {
+    ADD_TO_QUEUE,
+    RESET_QUEUE,
+    ADD_PHONE_DIGIT,
+    REMOVE_PREVIOUS_DIGIT,
+    RESET_PHONE
+};

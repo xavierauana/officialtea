@@ -1,0 +1,52 @@
+$containerBackgroundColor: #e4e4e4;
+$containerBorderRadius: 5px;
+$containerBorderWidth: 1px;
+$containerBorderColor: darken($containerBackgroundColor, 50%);
+
+.home{
+
+  #phoneNumber{
+    height: 50px;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  .dialPad {
+    .digit{
+      height: 150px;
+      button{
+        display: block;
+        width:100%;
+        border-radius: 5px;
+        background: grey;
+        color:white;
+        font-size: 2em;
+        line-height: 120px;
+
+        &:active{
+          background: white;
+          color:grey
+        }
+      }
+    }
+  }
+  .metricsContainer{
+    margin-bottom: 15px;
+  }
+
+  .action-container{
+    margin-right: 15px;
+    border: $containerBorderWidth solid $containerBorderColor;
+    background-color: $containerBackgroundColor;
+    border-radius: $containerBorderRadius;
+    min-height: 100px;
+    max-height: 200px;
+
+    &:hover{
+      background-color: darken($containerBackgroundColor, 30%);
+    }
+
+  }
+
+}
+
