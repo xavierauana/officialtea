@@ -7921,7 +7921,7 @@ button.close {
   margin-bottom: 15px; }
 
 .home .dialPad .digit {
-  height: 150px; }
+  height: 120px; }
   .home .dialPad .digit button {
     display: block;
     width: 100%;
@@ -7929,10 +7929,18 @@ button.close {
     background: grey;
     color: white;
     font-size: 2em;
-    line-height: 120px; }
+    line-height: 90px; }
     .home .dialPad .digit button:active {
       background: white;
       color: grey; }
+
+@media (max-width: 768px) {
+  .home .dialPad .digit {
+    height: 80px;
+    padding-left: 5px;
+    padding-right: 5px; }
+    .home .dialPad .digit button {
+      line-height: 40px; } }
 
 .home .metricsContainer {
   margin-bottom: 15px; }

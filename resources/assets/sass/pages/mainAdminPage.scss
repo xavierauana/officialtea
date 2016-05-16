@@ -2,6 +2,8 @@ $containerBackgroundColor: #e4e4e4;
 $containerBorderRadius: 5px;
 $containerBorderWidth: 1px;
 $containerBorderColor: darken($containerBackgroundColor, 50%);
+$digitHeight:120;
+$xsDigitHeight:70;
 
 .home{
 
@@ -13,7 +15,7 @@ $containerBorderColor: darken($containerBackgroundColor, 50%);
 
   .dialPad {
     .digit{
-      height: 150px;
+      height: ($digitHeight)+px;
       button{
         display: block;
         width:100%;
@@ -21,11 +23,22 @@ $containerBorderColor: darken($containerBackgroundColor, 50%);
         background: grey;
         color:white;
         font-size: 2em;
-        line-height: 120px;
+        line-height: ($digitHeight)-30px;
 
         &:active{
           background: white;
           color:grey
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .digit{
+        height: ($xsDigitHeight)+10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        button{
+          line-height: ($xsDigitHeight)-30px;
         }
       }
     }
